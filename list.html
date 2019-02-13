@@ -1,0 +1,55 @@
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content=width=device-width, initial-scale=1.0>
+        <title>Edit Style Javascript</title>
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.js"></script>
+        <script type="text/javascript">
+        function ChangeBackground(color){
+            //mengambil element HTML
+            var element = document.getElementById('pesan');
+            //mengosongkan class pada elemen yang diambil
+            element.className="";
+            //mmemberikan class"alert" pada elemen yang diambil
+            element.classList.add("alert");
+            //memberikan class tipe alert berdasarkan parameter
+            element.classList.add("alert-"+color);
+        }
+        </script>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card col-sm-12">
+                        <div class="card-header bg-success text-whte">
+                            <h4>Alert Setting</h4>
+                        </div>
+                        <div class="card-body">
+                            <div id="pesan" class="alert alert-light">
+                                <strong>Urgent</strong>
+                                This is a alert message, you can change type of alert below
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <!--Background setting-->
+                            <select class="form-control" onchange="ChangeBackground(this.value);">
+                            <option value="light">Default</option>
+                            <option value="primary">Primary</option>
+                            <option value="danger">Danger</option>
+                            <option value="warning">Warning</option>
+                            <option value="success">Success</option>
+                            <option value="darkt">Dark</option>
+                            <option value="secondary">Secondary</option>
+                        </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>

@@ -1,0 +1,46 @@
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content=width=device-width, initial-scale=1.0>
+        <title>Alert Javascript</title>
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div calss="row">
+                <div class="card col-sm-4">
+                    <div class="card-header bg-primary text-white">
+                        <h4>Basic Alert</h4>
+                    </div>
+                    <div class="card-body">
+                        <button type="button" class="btn btn-success"
+                        onclick="alert('Thank You for your Click')">
+                        Click On Me 
+                        </button>
+                        <button type="button" class="btn btn-success"
+                        onmouseover="alert('Thank You for Your Hover')">
+                    Hover On Me 
+                    </button>
+                    </div>
+                </div>
+
+                <div class="card-col-sm-4">
+                    <div class="card-header bg-success text-white">
+                        <h4>Dynamic Arlert</h4>
+                    </div>
+                    <div class="card-body">
+                        <input type="text" id="message" class="form-control">
+                        <button type="button" class="btn btn-success"
+                        onclick="alert(document.getElementById('message').vlue)">
+                    
+                    Show
+                </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>

@@ -1,0 +1,50 @@
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content=width=device-width, initial-scale=1.0>
+        <title>Edit Style Javascript</title>
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.js"></script>
+        <script type="text/javascript">
+        function Hitung(){
+            var panjang = document.getElementById('panjang').value;
+            var lebar =document.getElementById('lebar').value;
+            var warna =document.getElementById('warna').value;
+        
+        //Edit style
+        document.getElementById('square').style.width = panjang+"%";
+        document.getElementById('square').style.height = lebar+"%";
+        document.getElementById('square').style.backgroundColor = warna;
+    }
+    </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="card col-sm-4">
+                    <div class="card-header"><h4>Setting</h4></div>
+                    <div class="card-body">
+                        Width(percentage)
+                        <input type ="number" id="panjang" class="form-control">
+                        Height(percentage) 
+                        <input type="number" id="lebar" class="form-control">
+                        background
+                        <input type="color" id="warna"  class="form-control">
+                        <button type="button" class="btn btn-success btn-block"
+                        onclick=EditStyle();>
+                    Set
+                </button>
+                 </div>
+                </div>
+                <div class="card col-sm-8">
+                    <div class="card-header">Result</div>
+                    <div class="card-body">
+                        <div ic="square"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>
